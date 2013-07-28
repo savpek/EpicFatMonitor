@@ -1,0 +1,27 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.20617.1 PREVIEW
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EpicFatMonitor.Tests", "EpicFatMonitor.Tests\EpicFatMonitor.Tests.csproj", "{7A9E3263-E158-45CC-8D06-408DD517151B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EpicFatMonitor", "EpicFatMonitor\EpicFatMonitor.csproj", "{84C8DD06-9FF9-44E3-9581-BB24F0E5A99A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7A9E3263-E158-45CC-8D06-408DD517151B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7A9E3263-E158-45CC-8D06-408DD517151B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7A9E3263-E158-45CC-8D06-408DD517151B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7A9E3263-E158-45CC-8D06-408DD517151B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{84C8DD06-9FF9-44E3-9581-BB24F0E5A99A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{84C8DD06-9FF9-44E3-9581-BB24F0E5A99A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{84C8DD06-9FF9-44E3-9581-BB24F0E5A99A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{84C8DD06-9FF9-44E3-9581-BB24F0E5A99A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
