@@ -77,30 +77,30 @@
     <Content Include="Css\bootstrap-responsive.min.css" />
     <Content Include="Css\bootstrap.css" />
     <Content Include="Css\bootstrap.min.css" />
-    <Content Include="Content\images\glyphicons-halflings-white.png" />
-    <Content Include="Content\images\glyphicons-halflings.png" />
     <Content Include="Css\navbar.css" />
     <Content Include="Index.html" />
     <Content Include="Global.asax" />
-    <None Include="Scripts\jquery-1.9.1.intellisense.js" />
-    <Content Include="Scripts\angular-bootstrap-prettify.js" />
-    <Content Include="Scripts\angular-bootstrap-prettify.min.js" />
-    <Content Include="Scripts\angular-bootstrap.js" />
-    <Content Include="Scripts\angular-bootstrap.min.js" />
-    <Content Include="Scripts\angular-cookies.js" />
-    <Content Include="Scripts\angular-cookies.min.js" />
-    <Content Include="Scripts\angular-loader.js" />
-    <Content Include="Scripts\angular-loader.min.js" />
-    <Content Include="Scripts\angular-mocks.js" />
-    <Content Include="Scripts\angular-resource.js" />
-    <Content Include="Scripts\angular-resource.min.js" />
-    <Content Include="Scripts\angular-sanitize.js" />
-    <Content Include="Scripts\angular-sanitize.min.js" />
-    <Content Include="Scripts\angular-scenario.js" />
-    <Content Include="Scripts\angular.js" />
-    <Content Include="Scripts\angular.min.js" />
-    <Content Include="Scripts\bootstrap.js" />
-    <Content Include="Scripts\bootstrap.min.js" />
+    <None Include="Scripts\Lib\jquery-1.9.1.intellisense.js" />
+    <Content Include="Scripts\App\app.js" />
+    <Content Include="Scripts\App\controllers.js" />
+    <Content Include="Scripts\Lib\angular-bootstrap-prettify.js" />
+    <Content Include="Scripts\Lib\angular-bootstrap-prettify.min.js" />
+    <Content Include="Scripts\Lib\angular-bootstrap.js" />
+    <Content Include="Scripts\Lib\angular-bootstrap.min.js" />
+    <Content Include="Scripts\Lib\angular-cookies.js" />
+    <Content Include="Scripts\Lib\angular-cookies.min.js" />
+    <Content Include="Scripts\Lib\angular-loader.js" />
+    <Content Include="Scripts\Lib\angular-loader.min.js" />
+    <Content Include="Scripts\Lib\angular-mocks.js" />
+    <Content Include="Scripts\Lib\angular-resource.js" />
+    <Content Include="Scripts\Lib\angular-resource.min.js" />
+    <Content Include="Scripts\Lib\angular-sanitize.js" />
+    <Content Include="Scripts\Lib\angular-sanitize.min.js" />
+    <Content Include="Scripts\Lib\angular-scenario.js" />
+    <Content Include="Scripts\Lib\angular.js" />
+    <Content Include="Scripts\Lib\angular.min.js" />
+    <Content Include="Scripts\Lib\bootstrap.js" />
+    <Content Include="Scripts\Lib\bootstrap.min.js" />
     <Content Include="Scripts\i18n\angular-locale_af-na.js" />
     <Content Include="Scripts\i18n\angular-locale_af-za.js" />
     <Content Include="Scripts\i18n\angular-locale_af.js" />
@@ -388,10 +388,14 @@
     <Content Include="Scripts\i18n\angular-locale_zh.js" />
     <Content Include="Scripts\i18n\angular-locale_zu-za.js" />
     <Content Include="Scripts\i18n\angular-locale_zu.js" />
-    <Content Include="Scripts\jquery-1.9.1.js" />
-    <Content Include="Scripts\jquery-1.9.1.min.js" />
-    <Content Include="Web.config" />
-    <Content Include="Scripts\jquery-1.9.1.min.map" />
+    <Content Include="Scripts\Lib\jquery-1.9.1.js" />
+    <Content Include="Scripts\Lib\jquery-1.9.1.min.js" />
+    <Content Include="Views\stats.html" />
+    <Content Include="Views\home.html" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Scripts\Lib\jquery-1.9.1.min.map" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\WebApiConfig.cs" />
@@ -413,6 +417,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Content\" />
     <Folder Include="Controllers\" />
     <Folder Include="Models\" />
   </ItemGroup>
