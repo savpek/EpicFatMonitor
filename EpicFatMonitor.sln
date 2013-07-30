@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EpicFatMonitor.Tests", "Epi
 EndProject
 Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "SQLDatabaseProj", "EpicFatMonitor.Database\SQLDatabaseProj.sqlproj", "{8BBD7B1E-25D1-470F-BAD3-DCF01A57C80F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EpicFatMonitor", "EpicFatMonitor2\EpicFatMonitor.csproj", "{6A85FFF2-99E3-4D25-9943-C9B575372349}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EpicFatMonitor", "EpicFatMonitor\EpicFatMonitor.csproj", "{6A85FFF2-99E3-4D25-9943-C9B575372349}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
