@@ -10,7 +10,7 @@ namespace WebApplication1.Tests.Framework
 {
     public class SessionFactoryForTests
     {
-        public ISessionFactory CreateSessionFactory()
+        public static ISessionFactory CreateSessionFactory()
         {
             return Fluently.Configure()
               .Database(
@@ -23,9 +23,8 @@ namespace WebApplication1.Tests.Framework
               .BuildSessionFactory();
         }
 
-        public void BuildSchema(Configuration config)
+        private static void BuildSchema(Configuration config)
         {
-            // delete the existing db on each run
             if (File.Exists("firstProject.db"))
                 File.Delete("firstProject.db");
 

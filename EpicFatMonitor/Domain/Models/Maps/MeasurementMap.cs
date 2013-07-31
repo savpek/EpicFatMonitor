@@ -9,6 +9,7 @@ namespace EpicFatMonitor.Domain.Models.Maps
             Id(x => x.Id);
             Map(x => x.Time);
             Map(x => x.Weight);
+            References(x => x.User);
         }
     }
 }

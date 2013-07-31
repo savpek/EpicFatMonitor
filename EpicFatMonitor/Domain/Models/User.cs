@@ -4,8 +4,19 @@ namespace EpicFatMonitor.Domain.Models
 {
     public class User
     {
-        public int Id { get; set; }
-        public string Email { get; set; }
-        public List<Measurement> MesMeasurements {get; set; }
+        public User()
+        {
+            Measurements = new List<Measurement>();
+        }
+
+        public virtual int Id { get; set; }
+        public virtual string Email { get; set; }
+        public virtual IList<Measurement> Measurements {get; set; }
+
+        public virtual void AddMeasurement(Measurement measurement)
+        {
+            measurement.User = this;
+            Measurements.Add(measurement);
+        }
     }
 }
