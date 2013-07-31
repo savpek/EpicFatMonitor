@@ -9,7 +9,8 @@ namespace WebApplication1.Tests
         [TestMethod]
         public void DatabaseSchemaIsCreatedWithoutErrorsFromObjects()
         {
-            var factory = SessionFactoryForTests.CreateSessionFactory();
+            var factory = new InMemorySessionFactory();
+            factory.OpenSession();
         }
     }
 }

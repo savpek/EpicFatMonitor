@@ -16,7 +16,7 @@ namespace WebApplication1.Tests
         [TestInitialize]
         public void Init()
         {
-            _sessionFactory = SessionFactoryForTests.CreateSessionFactory();
+            _sessionFactory = new InMemorySessionFactory();
         }
 
         [TestMethod]
