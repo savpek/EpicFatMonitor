@@ -9,8 +9,8 @@
     <ProjectGuid>{7A9E3263-E158-45CC-8D06-408DD517151B}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>WebApplication1.Tests</RootNamespace>
-    <AssemblyName>WebApplication1.Tests</AssemblyName>
+    <RootNamespace>EpicFatMonitor.Tests</RootNamespace>
+    <AssemblyName>EpicFatMonitor.Tests</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -57,10 +57,12 @@
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data" />
-    <Reference Include="System.Data.SQLite">
+    <Reference Include="System.Data.SQLite, Version=1.0.87.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\System.Data.SQLite.1.0.87.0\lib\net45\System.Data.SQLite.dll</HintPath>
     </Reference>
-    <Reference Include="System.Data.SQLite.Linq">
+    <Reference Include="System.Data.SQLite.Linq, Version=1.0.87.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\System.Data.SQLite.1.0.87.0\lib\net45\System.Data.SQLite.Linq.dll</HintPath>
     </Reference>
     <Reference Include="System.Web" />
@@ -152,7 +154,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\EpicFatMonitor\EpicFatMonitor.csproj">
-      <Project>{6A85FFF2-99E3-4D25-9943-C9B575372349}</Project>
+      <Project>{402EE9BA-D9D8-410C-B6BA-8843C150E5E1}</Project>
       <Name>EpicFatMonitor</Name>
     </ProjectReference>
   </ItemGroup>

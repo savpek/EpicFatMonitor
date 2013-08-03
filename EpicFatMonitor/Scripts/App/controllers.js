@@ -3,8 +3,9 @@
 }
 
 fatMonitorApp.controller('HomeController', function($scope) {
-    $scope.foo = "ABC";
-})
+    $scope.sendWeight = function() {
+    };
+});
 
 fatMonitorApp.controller('StatsController', function ($scope) {
     $scope.items = ['foo', 'bar', 'jorma'];
