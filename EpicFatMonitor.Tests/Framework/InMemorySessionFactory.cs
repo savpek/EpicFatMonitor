@@ -23,7 +23,7 @@ namespace WebApplication1.Tests.Framework
             _factory = Fluently.Configure()
                   .Database(SQLiteConfiguration.Standard.InMemory().ShowSql())
                   .Mappings(m =>
-                    m.FluentMappings.AddFromAssemblyOf<SessionFactory>())
+                    m.FluentMappings.AddFromAssemblyOf<Storage>())
                   .ExposeConfiguration(conf => _configuration = conf)
                   .BuildSessionFactory();
         }

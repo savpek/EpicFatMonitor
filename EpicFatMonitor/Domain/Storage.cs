@@ -7,27 +7,23 @@ using NHibernate.Tool.hbm2ddl;
 
 namespace EpicFatMonitor.Domain
 {
-    public class SessionFactory
+    public class Storage
     {
-        private static ISessionFactory CreateSessionFactory()
+        public static ISessionFactory CreateSessionFactory()
         {
             return Fluently.Configure()
               .Database(
                 SQLiteConfiguration.Standard
-                  .UsingFile("firstProject.db")
+                  .UsingFile(Path.GetTempFileName())
               )
               .Mappings(m =>
-                m.FluentMappings.AddFromAssemblyOf<SessionFactory>())
+                m.FluentMappings.AddFromAssemblyOf<Storage>())
               .ExposeConfiguration(BuildSchema)
               .BuildSessionFactory();
         }
 
         private static void BuildSchema(Configuration config)
         {
-            // delete the existing db on each run
-            if (File.Exists("firstProject.db"))
-                File.Delete("firstProject.db");
-
             // this NHibernate tool takes a configuration (with mapping info in)
             // and exports a database schema from it
             new SchemaExport(config)

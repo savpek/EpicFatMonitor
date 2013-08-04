@@ -1,7 +1,7 @@
 ﻿var factories = {};
 
-factories.dailyWeightApiFactory = function ($resource) {
-    var factory = $resource('/rest/settings', {}, {
+factories.userService = function ($resource) {
+    var factory = $resource('/rest/user/', {}, {
         get: { method: "GET" },
         update: { method: "PUT" },
         isArray: false

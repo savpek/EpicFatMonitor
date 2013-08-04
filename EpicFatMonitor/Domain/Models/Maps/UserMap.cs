@@ -6,8 +6,7 @@ namespace EpicFatMonitor.Domain.Models.Maps
     {
         public UserMap()
         {
-            Id(x => x.Id);
-            Map(x => x.Email);
+            Id(x => x.Email);
             HasMany(x => x.Measurements).Cascade.All();
         }
     }

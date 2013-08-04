@@ -35,7 +35,8 @@ namespace WebApplication1.Tests
 
                 var result = query.SingleOrDefault();
                 result.Email.Should().Be("test@gmail.com");
-                result.Measurements.ShouldAllBeEquivalentTo(measurements, o => o.Excluding(x => x.Id));
+
+                result.Measurements.ShouldAllBeEquivalentTo(measurements);
             }
         }
     }

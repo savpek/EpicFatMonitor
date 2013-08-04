@@ -2,8 +2,13 @@
     $scope.foo = "ABC";
 }
 
-fatMonitorApp.controller('HomeController', function($scope) {
-    $scope.sendWeight = function() {
+fatMonitorApp.controller('HomeController', function ($scope, userService) {
+    var dailyWeightApi = userService;
+
+    $scope.sendWeight = function () {
+        dailyWeightApi.get({}, function (user) {
+            $scope.weight = user.Measurements[0].Weight;
+        });
     };
 });
 

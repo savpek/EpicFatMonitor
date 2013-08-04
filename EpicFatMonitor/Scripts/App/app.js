@@ -1,6 +1,6 @@
 ﻿'use strict';
 
-var fatMonitorApp = angular.module('fatMonitorApp', []);
+var fatMonitorApp = angular.module('fatMonitorApp', ['ngResource']);
 
 fatMonitorApp.config(function ($routeProvider) {
     $routeProvider.when('/Home', { templateUrl: 'Views/home.html', controller: 'HomeController' });

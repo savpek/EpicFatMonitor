@@ -9,9 +9,8 @@ namespace EpicFatMonitor.Domain.Models
             Measurements = new List<Measurement>();
         }
 
-        public virtual int Id { get; set; }
         public virtual string Email { get; set; }
-        public virtual IList<Measurement> Measurements {get; set; }
+        public virtual IList<Measurement> Measurements { get; set; }
 
         public virtual void AddMeasurement(Measurement measurement)
         {
