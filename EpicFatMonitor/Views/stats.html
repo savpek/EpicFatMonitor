@@ -1,12 +1,12 @@
 ﻿    <table class="table table-striped table-bordered table-condensed">
         <thead>
             <tr>
-                <th>Time</th><th>Weight</th><th>Percent from initial</th>
+                <th>Time</th><th>Weight</th><th>Change from initial</th>
             </tr>
         </thead>
-        <tr ng-repeat="item in items">
-            <td>Foo</td>
-            <td>Bar</td>
-            <td>{{ item }}</td>
+        <tr ng-repeat="measurement in measurements">
+            <td>{{ measurement.Time }}</td>
+            <td>{{ measurement.Weight }}</td>
+            <td>{{ measurement.fromInitialPercent | number:1 }}%</td>
         </tr>
     </table>

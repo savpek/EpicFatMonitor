@@ -197,7 +197,7 @@
     <Content Include="index.html" />
     <Content Include="Scripts\App\app.js" />
     <Content Include="Scripts\App\controllers.js" />
-    <Content Include="Scripts\App\factories.js" />
+    <Content Include="Scripts\App\services.js" />
     <Content Include="Scripts\jquery.signalR-1.0.0.js" />
     <Content Include="Scripts\jquery.signalR-1.0.0.min.js" />
     <Content Include="Scripts\Lib\angular-bootstrap-prettify.js" />
