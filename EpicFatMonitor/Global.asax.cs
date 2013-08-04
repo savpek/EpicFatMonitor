@@ -8,6 +8,7 @@ using Autofac.Integration.WebApi;
 using EpicFatMonitor.App_Start;
 using EpicFatMonitor.Domain;
 using NHibernate;
+using NHibernate.Hql.Ast.ANTLR;
 
 namespace EpicFatMonitor
 {
@@ -36,6 +37,7 @@ namespace EpicFatMonitor
 
             builder.RegisterApiControllers(Assembly.GetExecutingAssembly());
             builder.Register(c => Storage.CreateSessionFactory()).As<ISessionFactory>().SingleInstance();
+            builder.Register(c => new LoginInformation()).As<ILoginInformation>().SingleInstance();
 
             return builder.Build();
         }

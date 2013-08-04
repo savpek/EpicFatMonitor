@@ -1,31 +1,29 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Web.Http;
+﻿using System.Web.Http;
+using EpicFatMonitor.Domain;
 using EpicFatMonitor.Domain.Models;
 using NHibernate;
-using NHibernate.Mapping;
 
 namespace EpicFatMonitor.Controllers
 {
     public class UserController : ApiController
     {
         private readonly ISessionFactory _sessionFactory;
+        private readonly ILoginInformation _loginInformation;
 
-        public UserController(ISessionFactory sessionFactory)
+        public UserController(ISessionFactory sessionFactory, ILoginInformation loginInformation)
         {
             _sessionFactory = sessionFactory;
+            _loginInformation = loginInformation;
         }
 
-        public object Get()
+        public User Get()
         {
-            var foo = new List<Measurement> {new Measurement {Time = DateTime.Now, Weight = 120}};
-
-            return new User {Email = "savolainen.pekka@gmail.com", Measurements = foo};
+            return _loginInformation.CurrentUser();
         }
 
-        public void Put(User user)
+        public User Put()
         {
-            return;
+            return null;
         }
     }
 }

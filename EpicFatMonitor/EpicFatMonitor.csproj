@@ -51,9 +51,24 @@
     <Reference Include="Iesi.Collections">
       <HintPath>..\packages\Iesi.Collections.3.2.0.4000\lib\Net35\Iesi.Collections.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.AspNet.SignalR.Core">
+      <HintPath>..\packages\Microsoft.AspNet.SignalR.Core.1.0.0\lib\net40\Microsoft.AspNet.SignalR.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.SignalR.Owin">
+      <HintPath>..\packages\Microsoft.AspNet.SignalR.Owin.1.0.0\lib\net45\Microsoft.AspNet.SignalR.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.SignalR.SystemWeb">
+      <HintPath>..\packages\Microsoft.AspNet.SignalR.SystemWeb.1.0.0\lib\net45\Microsoft.AspNet.SignalR.SystemWeb.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Owin.Host.SystemWeb">
+      <HintPath>..\packages\Microsoft.Owin.Host.SystemWeb.1.0.0\lib\net45\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
+    </Reference>
     <Reference Include="NHibernate">
       <HintPath>..\packages\NHibernate.3.3.3.4000\lib\Net35\NHibernate.dll</HintPath>
+    </Reference>
+    <Reference Include="Owin">
+      <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -159,6 +174,8 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\UserController.cs" />
+    <Compile Include="Domain\ILoginInformation.cs" />
+    <Compile Include="Domain\LoginInformation.cs" />
     <Compile Include="Domain\Models\Maps\MeasurementMap.cs" />
     <Compile Include="Domain\Models\Maps\UserMap.cs" />
     <Compile Include="Domain\Models\Measurement.cs" />
@@ -181,6 +198,8 @@
     <Content Include="Scripts\App\app.js" />
     <Content Include="Scripts\App\controllers.js" />
     <Content Include="Scripts\App\factories.js" />
+    <Content Include="Scripts\jquery.signalR-1.0.0.js" />
+    <Content Include="Scripts\jquery.signalR-1.0.0.min.js" />
     <Content Include="Scripts\Lib\angular-bootstrap-prettify.js" />
     <Content Include="Scripts\Lib\angular-bootstrap-prettify.min.js" />
     <Content Include="Scripts\Lib\angular-bootstrap.js" />
