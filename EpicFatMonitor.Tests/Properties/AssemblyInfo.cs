@@ -22,6 +22,8 @@ using System.Runtime.InteropServices;
 // The following GUID is for the ID of the typelib if this project is exposed to COM
 [assembly: Guid("d93fcdfa-dbb8-4111-8966-5fbc9c524aa7")]
 
+[assembly: InternalsVisibleTo("EpicFatMonitor")]
+
 // Version information for an assembly consists of the following four values:
 //
 //      Major Version

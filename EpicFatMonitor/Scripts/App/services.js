@@ -3,7 +3,7 @@
 factories.userService = function ($resource, $rootScope) {
     var restApi = $resource('/rest/user/', {}, {
         get: { method: "GET" },
-        update: { method: "PUT" },
+        post: { method: "POST" },
         isArray: false
     });
 
@@ -17,7 +17,11 @@ factories.userService = function ($resource, $rootScope) {
         $rootScope.$broadcast('userServiceUpdated');
     });
 
-    service.Save = function() {
+    service.Save = function () {
+        restApi.post({ "email": service.email, "measurements" : service.measurements}, function() {
+            
+        });
+
         console.log("service.Save called.");
     };
 

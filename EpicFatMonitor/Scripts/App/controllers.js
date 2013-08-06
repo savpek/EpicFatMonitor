@@ -14,7 +14,7 @@ fatMonitorApp.controller('HomeController', function ($scope, userService) {
     });
 
     $scope.sendWeight = function () {
-        
+        userService.Save();
     };
 });
 

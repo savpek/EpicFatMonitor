@@ -2,24 +2,24 @@
 using System.Collections.Generic;
 using EpicFatMonitor.Domain.Models;
 using FluentAssertions;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
 using NHibernate;
+using NUnit.Framework;
 using WebApplication1.Tests.Framework;
 
 namespace WebApplication1.Tests
 {
-    [TestClass]
+    [TestFixture]
     public class UserMapTests
     {
         private ISessionFactory _sessionFactory;
 
-        [TestInitialize]
+        [SetUp]
         public void Init()
         {
             _sessionFactory = new InMemorySessionFactory();
         }
 
-        [TestMethod]
+        [Test]
         public void SaveOrUpdate_WorksCorrectly()
         {
             using (var session = _sessionFactory.OpenSession())

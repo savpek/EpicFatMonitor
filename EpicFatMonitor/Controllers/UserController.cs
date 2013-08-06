@@ -1,5 +1,6 @@
 ﻿using System.Web.Http;
 using EpicFatMonitor.Domain;
+using EpicFatMonitor.Domain.Exceptions;
 using EpicFatMonitor.Domain.Models;
 using NHibernate;
 
@@ -21,9 +22,10 @@ namespace EpicFatMonitor.Controllers
             return _loginInformation.CurrentUser();
         }
 
-        public User Put()
+        public void Post(User data)
         {
-            return null;
+            if (_loginInformation.CurrentUser().Email != data.Email)
+                throw new AccessDeniedException("Restricted! You can only update your current account or add new nonexisting one.");
         }
     }
 }

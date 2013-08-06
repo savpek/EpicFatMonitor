@@ -1,12 +1,12 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using NUnit.Framework;
 using WebApplication1.Tests.Framework;
 
-namespace WebApplication1.Tests
+namespace EpicFatMonitor.Tests
 {
-    [TestClass]
+    [TestFixture]
     public class DatabaseCreationTests
     {
-        [TestMethod]
+        [Test]
         public void DatabaseSchemaIsCreatedWithoutErrorsFromObjects()
         {
             var factory = new InMemorySessionFactory();

@@ -31,12 +31,14 @@ namespace WebApplication1.Tests.Framework
         public void Dispose()
         {
             _factory.Dispose();
+            _factory.Close();
         }
 
 
         public void Close()
         {
             _factory.Close();
+            _factory.Dispose();
         }
 
         public ISession OpenSession()

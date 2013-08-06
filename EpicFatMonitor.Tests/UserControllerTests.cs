@@ -2,22 +2,23 @@
 using System.Collections.Generic;
 using EpicFatMonitor.Controllers;
 using EpicFatMonitor.Domain;
+using EpicFatMonitor.Domain.Exceptions;
 using EpicFatMonitor.Domain.Models;
 using FluentAssertions;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
 using NSubstitute;
+using NUnit.Framework;
 using WebApplication1.Tests.Framework;
 
 namespace EpicFatMonitor.Tests
 {
-    [TestClass]
+    [TestFixture]
     public class UserControllerTests
     {
         private InMemorySessionFactory _sessionFactory;
         private ILoginInformation _loginInformation;
         private UserController _controller;
 
-        [TestInitialize]
+        [SetUp]
         public void Init()
         {
             _sessionFactory = new InMemorySessionFactory();
@@ -25,7 +26,7 @@ namespace EpicFatMonitor.Tests
             _controller = new UserController(_sessionFactory, _loginInformation);
         }
 
-        [TestMethod]
+        [Test]
         public void Get_IfLoggedIn_ReturnUserCorrectly()
         {
             // Arrange.
@@ -40,10 +41,25 @@ namespace EpicFatMonitor.Tests
             _controller.Get().ShouldBeEquivalentTo(user);
         }
 
-        [TestCleanup]
+        [Test]
+        public void Post_IfTargetUserAndCurrentUserDoesNotMatch_ThrowAccessDeniedError()
+        {
+            // Arrange.
+            var user = new User {Email = "Trash@gmail.com"};
+            _loginInformation.CurrentUser().Returns(user);
+            var postData = new User {Email = "savolainen.pekka@gmail.com"};
+
+            // Act and assert.
+            _controller
+                .Invoking(c => c.Post(postData))
+                .ShouldThrow<AccessDeniedException>("Restricted! You can only update your current account or add new nonexisting one.");
+        }
+
+        [TearDown]
         public void CleanUp()
         {
             _sessionFactory.Dispose();
+            _sessionFactory.Close();
         }
     } 
 }
